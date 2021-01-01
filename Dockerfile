@@ -6,7 +6,6 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["CICDWebApplication1/CICDWebApplication1.csproj", "CICDWebApplication1/"]
 RUN dotnet restore "CICDWebApplication1/CICDWebApplication1.csproj"
 COPY . .
 WORKDIR "/src/CICDWebApplication1"
